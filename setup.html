@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Follow a simple Google 2-Step Verification setup guide, then prepare a backup sign-in method.">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Set It Up | 2FA Awareness Guide</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="container p-4">
+        <header>
+            <a class="site-name" href="index.html">2FA Awareness Guide</a>
+            <div id="nav-placeholder">
+                <nav class="nav" aria-label="Main navigation">
+                    <a class="nav-link" href="index.html">Understand 2FA</a>
+                    <a class="nav-link" href="setup.html" aria-current="page">Set It Up</a>
+                    <a class="nav-link" href="stay-safe.html">Stay Safe</a>
+                    <a class="nav-link" href="sources.html">Sources</a>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content" tabindex="-1">
+            <div class="page-heading">
+                <p class="eyebrow">Take it one step at a time</p>
+                <h1>Turn on Google's<br>2-Step Verification.</h1>
+                <p class="lead reading-width">Use this guide beside your own Google Account. All account changes happen on Google's website, not here.</p>
+            </div>
+            <aside class="guide-note reading-width" aria-label="Before you start">
+                <h2 class="h5">Before you start</h2>
+                <p>Use a private device you trust and have your usual sign-in method ready. Do not share your screen when passwords, setup QR codes, or recovery codes are visible.</p>
+            </aside>
+
+            <section class="guide-section" aria-labelledby="setup-heading">
+                <h2 id="setup-heading">Follow these four steps</h2>
+                <!-- An ordered list keeps the setup sequence clear without extra JavaScript. -->
+                <ol class="setup-steps reading-width">
+                    <li>
+                        <h3>Open your Google Account</h3>
+                        <p>Go directly to <a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer">myaccount.google.com (opens a new tab)</a> and sign in there. Do not follow a sign-in link from an unexpected message.</p>
+                    </li>
+                    <li>
+                        <h3>Find the security settings</h3>
+                        <p>Select <strong>Security &amp; sign-in</strong>, then find <strong>How you sign in to Google</strong>.</p>
+                    </li>
+                    <li>
+                        <h3>Choose 2-Step Verification</h3>
+                        <p>Select <strong>Turn on 2-Step Verification</strong>. Google may ask you to verify that it is you.</p>
+                    </li>
+                    <li>
+                        <h3>Follow Google's prompts and confirm</h3>
+                        <p>Complete the on-screen instructions for an available method. Return to the 2-Step Verification settings and confirm it is on. <a href="stay-safe.html#methods">Understand the method choices</a>.</p>
+                    </li>
+                </ol>
+                <p class="source-note">Path checked October 19, 2026: <a href="https://support.google.com/accounts/answer/185839?hl=en">Google's official setup instructions</a>. Screens and options can change. A work or school account may require your administrator's help.</p>
+                <p class="reading-width">Google may offer a passkey instead of a password-and-code flow, so not every sign-in looks the same.</p>
+            </section>
+
+            <section class="guide-section" aria-labelledby="backup-heading">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-8">
+                        <p class="eyebrow">Do this before you finish</p>
+                        <h2 id="backup-heading">Make a backup plan.</h2>
+                        <p class="reading-width">A lost phone should not leave you without a way back in. After enabling 2-Step Verification, open its settings and find <strong>Backup codes</strong>. Follow Google's options to get and print or download a set.</p>
+                        <p class="reading-width">Keep them private, somewhere safe you can reach without that phone, such as a secure place for important documents. Each code works once. A new set replaces the old set.</p>
+                        <p class="source-note"><a href="https://support.google.com/accounts/answer/1187538?hl=en">Google's backup-code instructions</a> also explain how to use an unused code through <strong>Try another way</strong> at sign-in. Backup-code downloads are unavailable in Google's Advanced Protection Program.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <figure class="mb-0">
+                            <img src="images/backup-codes-safe.jpg"
+                                 alt="A paper with abstract marks stored in a lockbox beside a phone, representing private backup codes."
+                                 width="1200" height="900" class="img-fluid rounded" loading="lazy">
+                            <figcaption>AI-generated illustration. No real codes are shown.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="guide-section" aria-labelledby="finish-heading">
+                <h2 id="finish-heading">Ready to move on?</h2>
+                <ul class="reading-width finish-list">
+                    <li>Your account settings confirm 2-Step Verification is on.</li>
+                    <li>You know which sign-in method you set up.</li>
+                    <li>You have a private backup method available.</li>
+                </ul>
+                <a class="btn btn-info" href="stay-safe.html">Next: keep your second factor safe <span aria-hidden="true">&rarr;</span></a>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <p>Created by Jettra Koy · Cybersecurity Impact Project</p>
+            <p>Never share passwords, verification codes, backup codes, or setup QR codes. <a href="sources.html">Sources &amp; image credits</a></p>
+        </footer>
+    </div>
+    <script src="navigation.js"></script>
+</body>
+</html>

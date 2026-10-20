@@ -1,0 +1,344 @@
+/* Give every page a black background and white text. */
+body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Keep links easy to identify against the dark background. */
+a,
+.nav-link {
+    color: #9bd1ff;
+}
+
+a:hover,
+.nav-link:hover {
+    color: #fff;
+}
+
+/* Keep keyboard navigation clearly visible. */
+a:focus-visible {
+    outline: 3px solid #ffe082;
+    outline-offset: 3px;
+}
+/* Keep the decorative stars behind the page content. */
+body {
+    isolation: isolate;
+}
+/* Draw small stars without adding image files. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle at 20px 30px, white 1px, transparent 2px),
+        radial-gradient(circle at 100px 150px, #b7d9ff 1px, transparent 2px),
+        radial-gradient(circle at 170px 80px, white 1.5px, transparent 2.5px);
+
+    background-size:
+        230px 210px,
+        340px 290px,
+        410px 370px;
+
+    opacity: 0.22;
+    animation: star-glimmer 2s ease-in-out 2;
+}
+
+/* Gently brighten and dim the stars twice, then stop. */
+@keyframes star-glimmer {
+    0%, 100% {
+        opacity: 0.22;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Leave stars still when the visitor prefers reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+    }
+}
+
+/* Everything above this line is copied from the original portfolio stylesheet.
+   These small additions make longer educational pages easier to read. */
+body {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+}
+.container {
+    max-width: 1160px;
+}
+.reading-width {
+    max-width: 760px;
+}
+.site-name {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.nav {
+    gap: 0.2rem;
+    border-bottom: 1px solid #263344;
+    padding-bottom: 0.7rem;
+}
+.nav-link {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 2px solid transparent;
+}
+.nav-link:first-child {
+    margin-left: -0.85rem;
+}
+.nav-link[aria-current="page"] {
+    color: #fff;
+    border-bottom-color: #9bd1ff;
+}
+.hero {
+    padding: 2.5rem 0 1.5rem;
+}
+h1 {
+    font-size: clamp(2.15rem, 4.5vw, 3.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.25rem;
+}
+h2 {
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+.eyebrow, .step-label {
+    color: #a6d7ff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.055em;
+}
+.eyebrow {
+    margin-bottom: 0.75rem;
+}
+.lead {
+    color: #e4eaf1;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+.btn-info {
+    background: #9bd1ff;
+    border-color: #9bd1ff;
+    color: #06131f;
+    font-weight: 650;
+    padding: 0.7rem 1rem;
+}
+.btn-info:hover {
+    background: #d0eaff;
+    border-color: #d0eaff;
+    color: #06131f;
+}
+.secondary-link {
+    display: inline-block;
+    margin: 0.8rem 0 0.4rem 1rem;
+}
+.text-link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-weight: 600;
+}
+.guide-section {
+    border-top: 1px solid #263344;
+    padding: 2.5rem 0;
+}
+.page-heading {
+    padding: 3.5rem 0 1.5rem;
+}
+figcaption, .source-note, .site-footer {
+    color: #bec9d6;
+    font-size: 0.9rem;
+}
+figcaption {
+    margin-top: 0.65rem;
+    line-height: 1.5;
+}
+.source-note {
+    margin-top: 1.1rem;
+    max-width: 850px;
+}
+.factor-flow {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 1.5rem 0;
+}
+.factor-block {
+    flex: 1;
+    align-self: stretch;
+    background: #0a1422;
+    border: 1px solid #304963;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.factor-block h3 {
+    margin: 0.4rem 0 0.6rem;
+}
+.factor-block p {
+    margin-bottom: 0;
+}
+.factor-plus {
+    color: #9bd1ff;
+    font-size: 2rem;
+}
+.guide-note {
+    background: #0a1422;
+    border-left: 3px solid #9bd1ff;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.guide-note p {
+    margin: 0;
+}
+.setup-steps, .safety-list, .source-list {
+    padding-left: 1.7rem;
+}
+.setup-steps li, .safety-list li, .source-list li {
+    padding-left: 0.5rem;
+    margin: 1.6rem 0;
+}
+.setup-steps li::marker, .safety-list li::marker, .source-list li::marker {
+    color: #9bd1ff;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.finish-list li {
+    margin: 0.6rem 0;
+}
+.method-table {
+    --bs-table-bg: #0a1422;
+    --bs-table-color: #f4f7fb;
+    --bs-table-border-color: #304963;
+    min-width: 620px;
+    margin-top: 1.5rem;
+}
+.method-table th, .method-table td {
+    padding: 1rem;
+    vertical-align: top;
+}
+.method-table thead th {
+    color: #a6d7ff;
+}
+.method-table caption {
+    color: #bec9d6;
+    caption-side: top;
+}
+.practice-example {
+    background: #0a1422;
+    border: 1px solid #304963;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+summary {
+    color: #9bd1ff;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.3rem 0;
+}
+details[open] summary {
+    margin-bottom: 0.7rem;
+}
+details p:last-child {
+    margin-bottom: 0;
+}
+summary:focus-visible, button:focus-visible, .table-responsive:focus-visible {
+    outline: 3px solid #ffe082;
+    outline-offset: 3px;
+}
+.site-footer {
+    border-top: 1px solid #263344;
+    padding: 1.5rem 0 0.5rem;
+    margin-top: 1rem;
+}
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+/* A skip link stays hidden until a keyboard user focuses it. */
+.skip-link {
+    position: fixed;
+    left: 1rem;
+    top: -6rem;
+    z-index: 10;
+    background: #9bd1ff;
+    color: #06131f;
+    padding: 0.7rem 1rem;
+}
+.skip-link:focus {
+    top: 1rem;
+    color: #06131f;
+}
+@media (max-width: 767.98px) {
+    .hero {
+        padding-top: 1rem;
+    }
+    .hero figure {
+        max-width: 450px;
+        margin: auto;
+    }
+    .page-heading {
+        padding-top: 2rem;
+    }
+    .secondary-link {
+        margin-left: 0;
+        display: block;
+    }
+    .factor-flow {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+    }
+    .factor-plus {
+        text-align: center;
+        line-height: 1;
+    }
+    .nav-link {
+        font-size: 0.95rem;
+        padding: 0.6rem;
+    }
+    .nav-link:first-child {
+        margin-left: -0.6rem;
+    }
+}
+@media print {
+    body {
+        background: #fff;
+        color: #000;
+    }
+    body::before, .skip-link, #nav-placeholder, .hero figure {
+        display: none;
+    }
+    a, .site-name, .eyebrow, .step-label, .lead, .source-note, figcaption, .site-footer {
+        color: #000;
+    }
+    .factor-block, .guide-note, .practice-example {
+        background: #fff;
+        color: #000;
+        border-color: #777;
+    }
+    .method-table {
+        --bs-table-bg: #fff;
+        --bs-table-color: #000;
+    }
+    .method-table thead th, .method-table caption {
+        color: #000;
+    }
+}

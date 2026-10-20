@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple guide to understanding two-factor authentication, enabling it on Google, and protecting your verification codes.">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Understand 2FA | 2FA Awareness Guide</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Reused from my portfolio: one container and a shared navigation file. -->
+    <div class="container p-4">
+        <header>
+            <a class="site-name" href="index.html">2FA Awareness Guide</a>
+            <!-- These links remain usable if the shared menu cannot load. -->
+            <div id="nav-placeholder">
+                <nav class="nav" aria-label="Main navigation">
+                    <a class="nav-link" href="index.html" aria-current="page">Understand 2FA</a>
+                    <a class="nav-link" href="setup.html">Set It Up</a>
+                    <a class="nav-link" href="stay-safe.html">Stay Safe</a>
+                    <a class="nav-link" href="sources.html">Sources</a>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content" tabindex="-1">
+            <!-- Same responsive row and 8/4 columns as the portfolio introduction. -->
+            <div class="row align-items-center g-4 mt-3 hero">
+                <div class="col-md-8">
+                    <p class="eyebrow">A little knowledge. Another layer of protection.</p>
+                    <h1>Two-factor authentication,<br>made simple.</h1>
+                    <p class="lead">Your password is a start. A second check helps protect your account if that password is stolen.</p>
+                    <p>This guide explains 2FA in plain language, walks through Google's setup, and shows how to keep your codes private.</p>
+                    <a class="btn btn-info" href="setup.html">Start the Google setup guide <span aria-hidden="true">&rarr;</span></a>
+                    <a class="secondary-link" href="#what-is-2fa">First, understand 2FA</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <!-- Same responsive image and caption pattern as my portfolio. -->
+                    <figure class="mb-0">
+                        <img src="images/two-factor-checks.jpg"
+                             alt="A laptop with password dots and a phone with a checkmark connected to a locked shield."
+                             width="1200" height="900" class="img-fluid rounded">
+                        <figcaption>Original AI-generated illustration. Not an account screenshot.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <section id="what-is-2fa" class="guide-section" aria-labelledby="meaning-heading">
+                <p class="eyebrow">01 / Understand the idea</p>
+                <h2 id="meaning-heading">What does 2FA actually mean?</h2>
+                <p class="reading-width">Two-factor authentication checks two different kinds of proof that it is you. A common example is your password plus a code from an authenticator app on your phone.</p>
+                <!-- Real HTML labels stay readable and editable, unlike text baked into an image. -->
+                <div class="factor-flow">
+                    <div class="factor-block">
+                        <span class="step-label">Something you know</span>
+                        <h3>Your password</h3>
+                        <p>A secret you remember or keep in a password manager.</p>
+                    </div>
+                    <span class="factor-plus" aria-hidden="true">+</span>
+                    <div class="factor-block">
+                        <span class="step-label">Something you have</span>
+                        <h3>Your authenticator</h3>
+                        <p>An app on your device that creates a sign-in code.</p>
+                    </div>
+                </div>
+                <p class="reading-width">Two passwords do not count as two factors: both are something you know. Another factor type is something you are, such as a fingerprint.</p>
+                <p class="source-note">Concepts: <a href="https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication">NIST's multi-factor authentication guidance</a>.</p>
+            </section>
+
+            <section class="guide-section" aria-labelledby="why-heading">
+                <p class="eyebrow">02 / Know why it matters</p>
+                <h2 id="why-heading">A stolen password should not be the whole story.</h2>
+                <p class="reading-width">With a second factor, someone who steals your password still has another barrier to get past. It reduces risk, but does not stop every scam. Scammers can still try to trick you into sharing a code or approving a request.</p>
+                <p class="reading-width">You may also see the names <strong>2-Step Verification</strong> or <strong>multi-factor authentication (MFA)</strong>. MFA means two or more factor types; 2FA uses two.</p>
+                <a class="text-link" href="setup.html">Next: turn on 2-Step Verification for Google <span aria-hidden="true">&rarr;</span></a>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <p>Created by Jettra Koy · Cybersecurity Impact Project</p>
+            <p>Educational guide only. Never enter passwords or verification codes on this website. <a href="sources.html">Sources &amp; image credits</a></p>
+        </footer>
+    </div>
+    <script src="navigation.js"></script>
+</body>
+</html>
